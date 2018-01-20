@@ -1,0 +1,106 @@
+body {
+    background-image: url("back.jpg");
+}
+
+.card.t {
+    margin-top: 18px;
+    width: 49%;
+    padding: 0;
+}
+
+.q {
+
+    font-size: 24px;
+    padding: 10px;
+}
+
+.tab {
+    font-size: 18px;
+    margin-top: 80px;
+}
+
+p {
+    margin: 0;
+}
+
+.p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#points {
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    margin-top: 50px;
+}
+
+#estado {
+    background: #FFFAFA;
+    border-radius: 70px;
+    font-size: 16px;
+    float: right;
+    position: absolute;
+    margin-left: -42px;
+    padding: 18px;
+    margin-top: -42px;
+    font-weight: bold;
+    border: 1px salmon;
+    border-style: dashed;
+}
+
+p#category {
+    font-size: 15px;
+}
+
+.card-header {
+    padding: .55rem 1rem; 
+}
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.book{background-image:url(https://freeiconshop.com/wp-content/uploads/edd/book-open-outline-filled.png);}
+.music{background-image:url(https://freeiconshop.com/wp-content/uploads/edd/music-quavers-solid.png);}
+.game{background-image:url('img/game.png');}
+.laptop{background-image:url('img/laptop.png');}
+.napoleon{background-image:url('img/napoleon.png');}
+.smartwatch{background-image:url('img/smartwatch.png');}
+.celebrities{background-image:url('img/fame.png');}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+.drinkcard-cc{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:92px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}

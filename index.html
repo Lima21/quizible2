@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@5.3.0/dist/typeit.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="erro"></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-8 p-2 tab">
+                
+                    <img class="img-responsive" src="img/logo2.png" alt="" style="
+                    margin-left:  123px;">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="text-center">Quiz Setup</p>
+                    </div>
+                    <div class="col-sm-12">
+                        
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Difficulty</label>
+                            <select class="form-control" id="dif">
+                                <option value="any">Any Difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Category</label>
+                            <form id="myForm">
+                                <div class="cc-selector">
+                                    <input id="napoleon" type="radio" name="credit-card" value="9" checked="checked" />
+                                    <label class="drinkcard-cc napoleon" for="napoleon"></label>
+                                    <input id="book" type="radio" name="credit-card" value="10" />
+                                    <label class="drinkcard-cc book" for="book"></label>
+                                    <input id="music" type="radio" name="credit-card" value="12" />
+                                    <label class="drinkcard-cc music" for="music"></label>
+                                    <input id="game" type="radio" name="credit-card" value="15" />
+                                    <label class="drinkcard-cc game" for="game"></label>
+                                    <input id="laptop" type="radio" name="credit-card" value="18" />
+                                    <label class="drinkcard-cc laptop" for="laptop"></label>
+                                    <input id="smartwatch" type="radio" name="credit-card" value="30" />
+                                    <label class="drinkcard-cc smartwatch" for="smartwatch"></label>
+                                    <input id="celebrities" type="radio" name="credit-card" value="26" />
+                                    <label class="drinkcard-cc celebrities" for="celebrities"></label>
+
+
+                                    
+
+                                </div>
+                            </form>
+                        </div>
+
+                        <button type="button" class="btn btn-primary float-right" onclick="start()">Let's Play</button>
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function start() {
+            var myRadio = $('input[name="credit-card"]')
+            var checkedValue = myRadio.filter(':checked').val();
+            document.location.href = 'game.html?category=' + checkedValue + '&difficulty=' + $("#dif").val();
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
+<!-- 
+<label for="exampleFormControlSelect1">Category</label>
+                            <select class="form-control" id="type">
+                                <option value="9">General knowledge</option>
+                                <option value="10">Books</option>
+                                <option value="12">Music</option>
+                                <option value="15">Video Games</option>
+                                <option value="30">Gadgets</option>
+                                <option value="18">Computers</option>
+                            </select> -->

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@5.3.0/dist/typeit.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.js"></script>
+    <link rel="stylesheet" href="https://rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css">
+</head>
+
+<body>
+
+
+    <div id="erro"></div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-8 p-2 tab">
+                    <img class="img-responsive" src="img/logo2.png" alt="" style="
+                    margin-left:  123px;">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="text-center">Score</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <br>
+                        
+                        <section class="container">
+
+                               
+                            
+                                <div class="row justify-content-center align-items-center">
+                                   
+                                    <div class="col-lg-6">
+                                        <div id="test-circle3"></div>
+                                    </div>
+                                  
+                                </div>
+                            </section>
+
+                        <button type="button" class="btn btn-primary float-right" onclick="start()">Play Again</button>
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function start() {
+            document.location.href = 'index.html';
+        }
+    </script>
+
+<script>
+    
+
+
+
+    $( document ).ready(function() { // 6,32 5,38 2,34
+
+        var urlParams = new URLSearchParams(window.location.search);
+
+        var points = urlParams.get('points');
+        
+        points = parseInt(points);
+        
+        $("#test-circle3").circliful({
+            animation: 1,
+            animationStep: 6,
+            foregroundBorderWidth: 8,
+            backgroundBorderWidth: 4,
+            percent: points * 100 / 10,
+            iconColor: '#3498DB',
+            icon: 'f004',
+            iconSize: '40',
+            iconPosition: 'middle'
+        });
+        
+    });
+
+</script>
+
+
+</body>
+
+</html>
