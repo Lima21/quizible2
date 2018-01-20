@@ -1,5 +1,5 @@
 body {
-    background-image: url("back.jpg");
+    background-image: url("../img/back.jpg");
 }
 
 .card.t {
@@ -39,6 +39,7 @@ div#points {
     margin-top: 50px;
 }
 
+
 #estado {
     background: #FFFAFA;
     border-radius: 70px;
@@ -69,11 +70,11 @@ p#category {
 }
 .book{background-image:url(https://freeiconshop.com/wp-content/uploads/edd/book-open-outline-filled.png);}
 .music{background-image:url(https://freeiconshop.com/wp-content/uploads/edd/music-quavers-solid.png);}
-.game{background-image:url('img/game.png');}
-.laptop{background-image:url('img/laptop.png');}
-.napoleon{background-image:url('img/napoleon.png');}
-.smartwatch{background-image:url('img/smartwatch.png');}
-.celebrities{background-image:url('img/fame.png');}
+.game{background-image:url('../img/game.png');}
+.laptop{background-image:url('../img/laptop.png');}
+.napoleon{background-image:url('../img/napoleon.png');}
+.smartwatch{background-image:url('../img/smartwatch.png');}
+.celebrities{background-image:url('../img/fame.png');}
 
 .cc-selector input:active +.drinkcard-cc{opacity: .9;}
 .cc-selector input:checked +.drinkcard-cc{

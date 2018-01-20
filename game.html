@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/typeit@5.3.0/dist/typeit.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -28,17 +28,21 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-sm-8 p-2 tab">
-                    <img class="img-responsive" src="img/logo2.png" alt="" style="
+                <img class="img-responsive" src="assets/img/logo2.png" alt="" style="
                     margin-left:  123px;">
-                <div class="card">
+
+
+                    <img class="img-responsive l" src="assets/img/loader2.svg" alt="" style="
+                    margin-left:  123px;width: 500px;">
+                <div class="card s d-none">
                     <div class="card-header">
-                            <span id="estado">Q</span>
+                        <span id="estado">Q</span>
                         <p class="text-center" id="category"></p>
-                        
+
                     </div>
                     <div class="col-sm-12 q">
                         <span id="pergunta"></span>
-                       
+
 
 
                     </div>
@@ -53,7 +57,7 @@
     <div class="container">
 
         <div class="row justify-content-center align-items-center">
-            <div class="col-sm-8 p-2">
+            <div class="col-sm-8 p-2 s d-none">
 
                 <div class="card t col-sm-6 float-left">
                     <div class="card-body" id="resp1" onclick="selecionar(1)">
@@ -75,9 +79,9 @@
                         This is some text within a card body.
                     </div>
                 </div>
-             
-                
-           
+
+
+
             </div>
             <div class="col-sm-8 p-2">
                 <div class="col-sm-2 p">
@@ -85,9 +89,9 @@
                         Points: 0
                     </div>
                 </div>
-                </div>
+            </div>
         </div>
-        
+
     </div>
 
 
