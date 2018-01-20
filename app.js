@@ -6,6 +6,7 @@ var pontos;
 var perguntas;
 var correta;
 var selected;
+var start;
 
 //Annyang
 window.onload = function () {
@@ -22,7 +23,10 @@ window.onload = function () {
 
 
 function novaPergunta() {
-
+    //$('#bar').css('transition', '0s');
+    start = 60;
+    $('#bar').css('width', '100%');
+    $('#bar').removeClass('d-none');
     $('#estado').text("Q" + (pergunta + 1));
 
     correta = Math.floor((Math.random() * 4) + 1);
@@ -38,16 +42,38 @@ function novaPergunta() {
         }
     }
     $('#pergunta').html(perguntas.results[pergunta].question);
+    $('#category').html('Category: ' + perguntas.results[pergunta].category);
+    
+
+    reduzir();
+    
+
+}
 
 
-
-    $('#category').html('Category: ' + perguntas.results[pergunta].category)
-
+function reduzir() {
+    setTimeout(function () {
+      
+      if(!selected){
+        start = start - 2;
+        let perc = start * 100 / 60;
+        perc += '%';
+        $('#bar').css('width', perc);
+        console.log(start);
+        reduzir();
+        if(start <= 0) {
+            selecionar(5);
+        }
+      }
+    }, 400);
+    
 }
 
 function selecionar(escolha) {
     if (!selected) {
         selected = true;
+
+       // $('#bar').addClass('d-none');
         if (!Number.isInteger(parseInt(escolha))) {
             switch (escolha) {
                 case 'one':
@@ -67,7 +93,7 @@ function selecionar(escolha) {
         }
 
         if (Number.isInteger(parseInt(escolha))) {
-            $('#resp' + correta).css('background-color', '#d4edda');
+            $('#resp' + correta).css('background-color', '#7FFF00');
             if (escolha == correta) {
                 pontos++;
                 $('#points').text('Points: ' + pontos);
@@ -75,7 +101,7 @@ function selecionar(escolha) {
                 audio.play();
 
             } else {
-                $('#resp' + escolha).css('background-color', '#f8d7da');
+                $('#resp' + escolha).css('background-color', '#CD5C5C');
                 var audio = new Audio('assets/audio/fail.mp3');
                 audio.play();
             }
