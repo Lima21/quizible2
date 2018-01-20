@@ -148,10 +148,7 @@ function start() {
         perguntas = data;
         console.log(perguntas);
         if (data.response_code != 0) {
-            var instance = new TypeIt('#erro', {
-                strings: ['Ocorreu um erro ao pesquisar as perguntas']
-                // other options
-            });
+            document.location.href = '/';
 
         } else {
             novaPergunta();
